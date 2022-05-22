@@ -1,0 +1,280 @@
+:root {
+	--back-color: rgba(65, 61, 75, 0.75);
+	--content-color: rgb(249, 246, 244);
+	--primary: rgb(250, 0, 80);
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+	background-color: var(--back-color);
+	font-family: 'Lato', sans-serif;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	width: 40%;
+   	height: 480px;
+   	max-width: 720px;
+  	background-color: var(--content-color);
+  	border-radius: 8px;
+  	overflow: none;
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  	flex-direction: column;
+	box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, .2);
+}
+
+.header {
+	background-color: white;
+	border-radius: 8px 8px 0px 0px;
+	box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.25);
+	height: 50px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 0% auto;
+	justify-items: center;
+	align-content: center;
+}
+
+.icon-back {
+	position: relative;
+	font-size: 22px;
+	left: 24px;
+}
+
+.title-login {
+	display: inline;
+	font-weight: 800;
+	font-size: 16px;
+	font-family: Mulish;
+}
+
+.subtitle-login {
+	display: block;
+	width: 100%;
+	padding-left: 18px;
+	font-size: 14px;
+}
+
+.login-body {
+	display: flex;
+	height: 45%;
+	width: 95%;
+	background-color: white;
+	border-radius: 8px;
+	padding: 20px 15px;
+	flex-direction: column;
+	box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.25);
+}
+
+.mail {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 50px;
+	margin: 0;
+	overflow: hidden;
+}
+
+.mail input {
+	width: 100%;
+	height: 100%;
+	padding-top: 20px;
+	font-size: 15px;
+	border: none;
+	outline: none;
+}
+
+.mail label {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 1px solid #BBB;
+	color: #BBB;
+	font-family: Mulish;
+	font-weight: 600;
+}
+
+.mail label::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-bottom: 2px solid #BBB;
+	left: 0;
+	bottom: -1px;
+	transform: translateX(-100%);
+	transition: all .3s ease;
+}
+
+.content-mail {
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	transition: all .3s ease;
+}
+
+.mail input:focus + .label-mail .content-mail, .mail input:valid + .label-mail .content-mail {
+	transform: translateY(-150%);
+	font-size: 12px;
+	color: black;
+
+}
+
+.mail input:focus + .label-mail::after, .mail input:valid + .label-mail::after {
+	transform: translateX(0%);
+}
+
+.pass {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 50px;
+	margin: 40px 0 0 0;
+	overflow: hidden;
+}
+
+.pass input {
+	width: 100%;
+	height: 100%;
+	padding-top: 20px;
+	font-size: 15px;
+	border: none;
+	outline: none;
+}
+
+.pass label {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 1px solid #BBB;
+	color: #BBB;
+	font-family: Mulish;
+	font-weight: 600;
+}
+
+.pass label::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-bottom: 2px solid #BBB;
+	left: 0;
+	bottom: -1px;
+	transform: translateX(-100%);
+	transition: all .3s ease;
+}
+
+.content-password {
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	transition: all .3s ease;
+}
+
+.pass input:focus + .label-password .content-password, .pass input:valid + .label-password .content-password {
+	transform: translateY(-150%);
+	font-size: 12px;
+	color: black;
+
+}
+
+.pass input:focus + .label-password::after, .pass input:valid + .label-password::after {
+	transform: translateX(0%);
+}
+
+.forgot-password {
+	width: 100%;
+	padding-left: 18px;
+	text-decoration: none;
+	color: black;
+	font-size: 13px;
+	font-family: Mulish;
+	font-weight: 800;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 100%;
+	height: 90px;
+	border-radius: 0px 0px 8px 8px;
+	box-shadow: 0px -3px 20px -10px rgba(0, 0, 0, 0.25);
+}
+
+.submit {
+
+	border: none;
+	border-radius: 80px;
+	height: 52px;
+	width: 94%;
+	background-color: var(--primary);
+	color: white;
+	font-size: 15px;
+	font-family: Mulish;
+	font-weight: 800;
+}
+
+
+
+
+
+.box-forgot {
+	width: 40%;
+	max-width: 720px;
+   	height: 300px;
+  	background-color: var(--content-color);
+  	border-radius: 8px;
+  	overflow: none;
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  	flex-direction: column;
+	box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, .2);
+}
+
+
+.forgot-subtitle {
+	display: block;
+	width: 100%;
+	padding-left: 18px;
+	font-size: 14px;
+}
+
+.forgot-body {
+	display: flex;
+	height: 25%;
+	width: 95%;
+	background-color: white;
+	border-radius: 8px;
+	padding: 5px 15px;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.25);
+}
+
+
+
